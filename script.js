@@ -20,7 +20,7 @@
 
 /* ---------------------- CONFIG ---------------------- */
 
-const ACTIVITY_URL = "https://forms.gle/PASTE-YOUR-LINK-HERE";
+const ACTIVITY_URL = "https://drive.google.com/drive/folders/1KpjayCV2_HVwZRXQemSTNNcCg1TVU8ty";
 
 const LEVELS = [
     {
