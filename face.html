@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PROFED 1 GAME ACTIVITY</title>
+</head>
+
+<body>
+    <div class="game">
+        <h1>🔎 FIND THE SAME</h1>
+        <p>Find the image that matches the reference!</p>
+
+        <h3>REFERENCE IMAGE</h3>
+        <img id="message" class="target" src="IMAGES/1st outline.png" alt="Reference image">
+
+        <div class="choices" id="choices"></div>
+
+        <h3 id="message">Choose the matching image!</h3>
+        <p>Score: <span id="score">0</span></p>
+
+        <button onclick="newRound()">NEXT ROUND</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
