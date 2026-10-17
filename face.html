@@ -3,26 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn & Approach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>PROFED 1 GAME ACTIVITY</title>
 </head>
 
 <body>
-    <div class="game">
-        <h1>🔎 FIND THE SAME</h1>
-        <p>Find the image that matches the reference!</p>
+    <main class="app">
 
-        <h3>REFERENCE IMAGE</h3>
-        <img id="message" class="target" src="IMAGES/1st outline.png" alt="Reference image">
+        <header class="topbar">
+            <div>
+                <p class="course">ProfEd 1 Game Activity</p>
+                <h1>Find the Same</h1>
+            </div>
+            <div class="score-box" aria-live="polite">
+                <span class="score-label">Score</span>
+                <span class="score-value"><span id="score">0</span> / <span id="total">4</span></span>
+            </div>
+        </header>
 
-        <div class="choices" id="choices"></div>
+        <!-- GAME SCREEN -->
+        <section id="gameScreen" class="card">
 
-        <h3 id="message">Choose the matching image!</h3>
-        <p>Score: <span id="score">0</span></p>
+            <div class="progress" id="progress" aria-label="Level progress"></div>
+            <p class="level-text">Level <span id="levelNumber">1</span> of <span id="levelTotal">4</span></p>
 
-        <button onclick="newRound()">NEXT ROUND</button>
-    </div>
+            <p class="instruction">Look at the reference image, then pick the choice that matches it exactly.</p>
 
-    <script src="script.js"></script>
+            <div class="reference">
+                <h2>Reference image</h2>
+                <div class="reference-frame">
+                    <img id="referenceImage" src="" alt="Reference image">
+                </div>
+            </div>
+
+            <div class="choices-head">
+                <h2>Your choices</h2>
+            </div>
+            <div class="choices" id="choices"></div>
+
+            <div id="feedback" class="feedback" role="status" aria-live="polite">
+                Select one image to answer.
+            </div>
+
+            <div class="actions">
+                <button id="nextBtn" class="btn btn-primary" type="button" disabled>Next level</button>
+            </div>
+        </section>
+
+        <!-- RESULT SCREEN -->
+        <section id="resultScreen" class="card result hidden">
+            <p class="result-label">Game complete</p>
+            <h2 class="result-score"><span id="finalScore">0</span> / <span id="finalTotal">4</span></h2>
+            <p id="resultMessage" class="result-message"></p>
+
+            <div class="actions actions-center">
+                <a id="activityLink" class="btn btn-primary" href="#">Continue to activity questions</a>
+                <button id="restartBtn" class="btn btn-ghost" type="button">Play again</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="face.js"></script>
 </body>
 </html>
