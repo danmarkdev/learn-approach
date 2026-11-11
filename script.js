@@ -2,22 +2,6 @@
    FIND THE SAME - ProfEd 1 Game Activity
    ==========================================================
 
-   HOW TO EDIT THIS GAME (only change the CONFIG section):
-
-   1. ACTIVITY_URL  -> paste the link to your activity questions
-                       (Google Form, Google Docs, next page, etc.)
-   2. LEVELS        -> one block per level.
-        folder      = the folder name of the level (Level 1, Level 2...)
-        main        = file name of the reference (main) picture
-        choices     = the 3 choice file names
-        correct     = which choice is the right answer
-                      (0 = first, 1 = second, 2 = third)
-
-   File names must match EXACTLY, including capital letters,
-   spaces and the file extension. GitHub Pages is case-sensitive.
-   ========================================================== */
-
-
 /* ---------------------- CONFIG ---------------------- */
 
 const ACTIVITY_URL = "https://drive.google.com/drive/folders/1KpjayCV2_HVwZRXQemSTNNcCg1TVU8ty";
