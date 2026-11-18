@@ -1,9 +1,3 @@
-/* ==========================================================
-   FIND THE SAME - ProfEd 1 Game Activity
-   ==========================================================
-
-/* ---------------------- CONFIG ---------------------- */
-
 const ACTIVITY_URL = "https://drive.google.com/drive/folders/1KpjayCV2_HVwZRXQemSTNNcCg1TVU8ty";
 
 const LEVELS = [
@@ -33,11 +27,7 @@ const LEVELS = [
     }
 ];
 
-// Set to true if you want the choices shuffled every time
 const SHUFFLE_CHOICES = true;
-
-/* -------------------- END CONFIG -------------------- */
-
 
 let currentLevel = 0;
 let score = 0;
@@ -105,7 +95,6 @@ function loadLevel() {
     els.reference.src = imagePath(level.folder, level.main);
     els.reference.alt = "Reference image for level " + (currentLevel + 1);
 
-    // Pair each choice with whether it is the correct one, then shuffle
     let options = level.choices.map((file, index) => ({
         file: file,
         isCorrect: index === level.correct
